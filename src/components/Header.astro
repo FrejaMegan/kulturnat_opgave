@@ -1,0 +1,173 @@
+---
+---
+
+<header>
+  <!-- Venstre navigation -->
+  <nav class="nav-left">
+    <a href="/arrangor">Arrangør</a>
+    <a href="/om">Om kulturnatten</a>
+  </nav>
+
+  <!-- Logo -->
+  <div class="logo">
+    <a href="/">
+      <img src="/src/assets/logo.svg" alt="Logo" />
+    </a>
+  </div>
+
+  <!-- Højre navigation -->
+  <nav class="nav-right">
+    <a href="/program">Program</a>
+    <a href="/galleri">Galleri</a>
+  </nav>
+
+    <!-- Burger-menu -->
+    <button class="burger">☰</button>
+  
+    <!-- Mobil-menu -->
+    <div class="mobile-nav">
+      <a href="/arrangor">Arrangør</a>
+      <a href="/om">Om kulturnatten</a>
+      <a href="/program">Program</a>
+      <a href="/galleri">Galleri</a>
+    </div>
+  </header>
+  
+  <!-- Javascript -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector(".mobile-nav");
+  
+  
+      burger.addEventListener("click", function () {
+        burger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+  
+      document.querySelectorAll(".mobile-nav a").forEach((link) => {
+        link.addEventListener("click", function () {
+          burger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    });
+  </script>
+  
+  
+  <style>
+    /*----------Header styling----------*/
+    header {
+      background-color: #041723;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      width: 100%;
+      position: relative;
+    }
+  
+    /*----------Navigation----------*/
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+  
+    .nav-left, .nav-right {
+      display: flex;
+      justify-content: center;
+      gap: 150px;
+    }
+  
+    nav a {
+        color: white;
+        font-size: 20px;
+        font-family: serif;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        padding: 5px 10px; 
+        position: relative; 
+}
+
+    nav a:hover {
+        color: #5dffda;
+        transform: translateY(-2px); 
+        box-shadow: 0 4px 10px rgba(93, 255, 218, 0.4); 
+    }
+
+    nav a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: #5dffda;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
+
+    nav a:hover::after {
+        width: 100%; 
+    }
+
+    /*----------Logo----------*/
+    .logo img {
+      height: 80px;
+    }
+  
+    /*----------Burger-menu----------*/
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+    }
+  
+    .burger.active {
+      color: #5dffda; 
+    }
+  
+    /*----------Mobil-menu----------*/
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #041723;
+      width: 100%;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+  
+   
+    .mobile-nav.active {
+      display: flex;
+    }
+  
+    .mobile-nav a {
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+  
+    @media (max-width: 800px) {
+      .nav-left, .nav-right {
+        display: none; 
+      }
+  
+      .burger {
+        display: block;
+      }
+    }
+  </style>
+  
