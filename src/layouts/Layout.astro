@@ -1,22 +1,28 @@
-<!doctype html>
+---
+---
+<!DOCTYPE html>
 <html lang="da">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Helsingør Kulturnat</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Helsingør Kulturnat</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/background.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 </style>
+
