@@ -1,0 +1,182 @@
+        
+
+<footer>
+    <div class="footer_container">
+      <div class="footer_content">
+        <!-- Kontakt information med logo -->
+        <div class="footer_section contact">
+          <div class="logo">
+            <img src="/src/assets/logo.svg" alt="Logo" />
+          </div>
+          <h3>Kontakt:</h3>
+          <p>Har du spørgsmål til Kulturnat?</p>
+          <p>
+            Email: 
+            <a href="mailto:kulturnatten@elsinore2032.dk">
+              kulturnatten@elsinore2032.dk
+            </a>
+          </p>
+        </div>
+  
+        <!-- Genvej tekst i punktform -->
+        <div class="footer_section">
+          <h3>Genvej:</h3>
+          <ul>
+            <li><a href="#">Om kulturnatten</a></li>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Kontaktformular</a></li>
+          </ul>
+        </div>
+        
+        <!-- Sociale medier -->
+        <div class="social">
+            <h3>Følg os på:</h3>
+            <div class="icons">
+              <a href="#" class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.495V14.706h-3.13v-3.622h3.13V8.413c0-3.1 1.893-4.787 4.657-4.787 1.325 0 2.463.098 2.794.142v3.24l-1.916.001c-1.504 0-1.796.715-1.796 1.763v2.314h3.59l-.467 3.622h-3.123V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+                </svg>
+              </a>
+              <a href="#" class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-2.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+  </footer>
+  
+  <style>
+    footer {
+        background-color: #041723;
+        color: white;
+        padding: 40px 0;
+    }
+  
+    .footer_container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .footer_content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 900px;
+    }
+  
+    .footer_section {
+      flex: 1;
+      min-width: 200px;
+    }
+  
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    .footer_section h3 {
+      color: white;
+    }
+  
+    .footer_section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+  
+    .footer_section ul li {
+      margin-bottom: 5px;
+    }
+  
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .social_icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .icon svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+      transition: fill 0.3s;
+    }
+  
+    .icon:hover svg {
+      fill: #36cfc9;
+    }
+  
+@media (max-width: 768px) {
+  .footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer_logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer_sections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px; 
+  }
+
+  .contact {
+    text-align: left;
+    flex: 1;
+  }
+
+  .genvej {
+    text-align: right;
+    flex: 1;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+  </style>
+  
+
